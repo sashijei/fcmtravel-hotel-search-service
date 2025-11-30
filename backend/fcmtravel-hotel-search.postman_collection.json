@@ -1,0 +1,210 @@
+{
+  "info": {
+    "name": "FCMTravel Hotel Search Service",
+    "_postman_id": "c1f2f5d0-1234-4567-89ab-abcdef123456",
+    "description": "Postman collection for hotel search microservice with DB-backed and aggregated endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "DB Search",
+      "item": [
+        {
+          "name": "DB - Search Hotels (Basic)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/hotels/db?page=0&size=5&sortBy=price&sortDirection=asc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "hotels",
+                "db"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "price"
+                },
+                {
+                  "key": "sortDirection",
+                  "value": "asc"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DB - Search Hotels (Bangalore, 4 & 5 Star, Deluxe, rating desc)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/hotels/db?city=Bangalore&state=Karnataka&hotelTypes=FOUR_STAR&hotelTypes=FIVE_STAR&roomTypes=DELUXE&sortBy=rating&sortDirection=desc&page=0&size=10",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "hotels",
+                "db"
+              ],
+              "query": [
+                {
+                  "key": "city",
+                  "value": "Bangalore"
+                },
+                {
+                  "key": "state",
+                  "value": "Karnataka"
+                },
+                {
+                  "key": "hotelTypes",
+                  "value": "FOUR_STAR"
+                },
+                {
+                  "key": "hotelTypes",
+                  "value": "FIVE_STAR"
+                },
+                {
+                  "key": "roomTypes",
+                  "value": "DELUXE"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "rating"
+                },
+                {
+                  "key": "sortDirection",
+                  "value": "desc"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Aggregated Search",
+      "item": [
+        {
+          "name": "Aggregated - Search Hotels (Basic)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/hotels/aggregated?page=0&size=5&sortBy=price&sortDirection=asc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "hotels",
+                "aggregated"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "price"
+                },
+                {
+                  "key": "sortDirection",
+                  "value": "asc"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Aggregated - Search Hotels (Goa, Deluxe & Suite, price asc)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/hotels/aggregated?city=Goa&state=Goa&roomTypes=DELUXE&roomTypes=SUITE&sortBy=price&sortDirection=asc&page=0&size=10",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "hotels",
+                "aggregated"
+              ],
+              "query": [
+                {
+                  "key": "city",
+                  "value": "Goa"
+                },
+                {
+                  "key": "state",
+                  "value": "Goa"
+                },
+                {
+                  "key": "roomTypes",
+                  "value": "DELUXE"
+                },
+                {
+                  "key": "roomTypes",
+                  "value": "SUITE"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "price"
+                },
+                {
+                  "key": "sortDirection",
+                  "value": "asc"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ]
+}
