@@ -16,6 +16,8 @@ import com.fcmtravel.hotel.service.sort.SortStrategy;
 import com.fcmtravel.hotel.service.sort.SortStrategyFactory;
 
 /**
+ * Aggregator Microservice pattern
+ * 
  * Service layer that merges asynchronous results from multiple external
  * hotel providers and returns a combined unified response.
  *

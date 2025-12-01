@@ -1,6 +1,8 @@
 package com.fcmtravel.hotel.service.sort;
 
 /**
+ * Factory pattern
+ * 
  * Factory returning correct SortStrategy implementation
  * based on input filter (price/name/rating/hotelType future extension).
  *

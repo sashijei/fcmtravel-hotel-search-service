@@ -10,6 +10,10 @@ import java.util.concurrent.CompletableFuture;
  * Common provider integration interface for fetching hotels from
  * external third-party hotel APIs.
  *
+ * This is the abstraction for external providers. 
+ * Every provider implementation returns a CompletableFuture<List<Hotel>> 
+ * so that the aggregator can run them in parallel.
+ *
  * Implementors should:
  * - Call remote API
  * - Convert response to HotelDto

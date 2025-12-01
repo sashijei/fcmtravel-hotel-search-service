@@ -5,6 +5,8 @@ import com.fcmtravel.hotel.domain.Hotel;
 import java.util.Comparator;
 
 /**
+ * Strategy pattern
+ * 
  * Strategy Interface for sorting Hotel list by dynamic field.
  *
  * Implementations:
